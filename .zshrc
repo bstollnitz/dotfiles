@@ -1,7 +1,7 @@
 export ZSH="${HOME}/.oh-my-zsh"
 
 # Theme.
-ZSH_THEME="clean"
+ZSH_THEME="spaceship"
 
 # Plugins.
 plugins=(git)
