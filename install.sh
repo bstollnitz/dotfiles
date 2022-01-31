@@ -1,6 +1,7 @@
 #!/bin/bash
 
-dotfiles_dir = "/workspaces/.codespaces/.persistedshare/dotfiles"
+script_name=$0
+dotfiles_dir=$(dirname "$0")
 rm -rf ~/.zshrc
 rm -rf ~/.dircolors
 ln -s $dotfiles_dir/.zshrc ~/.zshrc
