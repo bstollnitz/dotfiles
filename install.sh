@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # Get the directory in which this script lives.
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-echo SCRIPT_DIR=$SCRIPT_DIR
+script_dir=$(dirname "$(readlink -f "$0")")
 
-echo Removing old files.
-rm -rf "$HOME/.zshrc"
-rm -rf "$HOME/.dircolors"
+# Get a list of all files in this directory that start with a dot.
+files=$(find -maxdepth 1 -type f -name ".*")
 
-echo Linking new dotfiles.
-ln -s "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
-ln -s "$SCRIPT_DIR/.dircolors" "$HOME/.dircolors"
+# Create a symbolic link to each file in the home directory.
+for file in $files; do
+    name=$(basename $file)
+    echo "Creating symlink to $name in home directory."
+    rm -rf ~/$name
+    ln -s $script_dir/$name ~/$name
+done
