@@ -5,5 +5,5 @@ rm -rf $HOME/.zshrc
 rm -rf $HOME/.dircolors
 
 echo Linking new dotfiles.
-ln -s ./.zshrc $HOME/.zshrc
-ln -s ./.dircolors $HOME/.dircolors
+ln -s /workspaces/.codespaces/.persistedshare/dotfiles/.zshrc $HOME/.zshrc
+ln -s /workspaces/.codespaces/.persistedshare/dotfiles/.dircolors $HOME/.dircolors
