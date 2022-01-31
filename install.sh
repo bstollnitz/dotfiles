@@ -1,7 +1,9 @@
 #!/bin/bash
 
-rm -rf ~/.zshrc
-rm -rf ~/.dircolors
-ln -s .zshrc ~/.zshrc
-ln -s .dircolors ~/.dircolors
+echo Removing old files.
+rm -rf $HOME/.zshrc
+rm -rf $HOME/.dircolors
 
+echo Linking new dotfiles.
+ln -s ./.zshrc $HOME/.zshrc
+ln -s ./.dircolors $HOME/.dircolors
