@@ -8,4 +8,4 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Set colors for LS_COLORS.
-eval `dircolors .dircolors`
+eval `dircolors ~/.dircolors`
