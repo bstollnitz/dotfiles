@@ -18,8 +18,11 @@ create_symlinks() {
 }
 
 create_symlinks
+
+echo "Initializing conda for zsh"
 conda init zsh
 
-# apt-get install powerline fonts-powerline
+# sudo apt-get install powerline fonts-powerline
+ZSH_CUSTOM="~/.oh-my-zsh/custom"
 sudo git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 sudo ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
