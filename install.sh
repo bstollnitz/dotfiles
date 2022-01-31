@@ -18,6 +18,4 @@ create_symlinks() {
 }
 
 create_symlinks
-
-
 conda init zsh
