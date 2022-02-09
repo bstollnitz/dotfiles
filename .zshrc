@@ -6,6 +6,7 @@ export SPACESHIP_DIR_TRUNC=0
 
 # Plugins.
 plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
 
 # Set colors for LS_COLORS.
